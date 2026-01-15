@@ -1,3 +1,5 @@
+#!/usr/bin/env /Users/huy.ly/.puro/envs/be_stable/flutter/bin/dart
+
 import 'dart:io';
 import 'dart:convert';
 
@@ -89,4 +91,10 @@ class Dashmon {
     final exitCode = await _process.exitCode;
     exit(exitCode);
   }
+}
+
+void main(List<String> args) {
+  print('Starting Dashmon...');
+  final dashmon = Dashmon(args);
+  dashmon.start();
 }
